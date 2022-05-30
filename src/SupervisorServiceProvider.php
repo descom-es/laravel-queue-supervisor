@@ -1,22 +1,22 @@
 <?php
 
-namespace Descom\Skeleton;
+namespace Descom\Supervisor;
 
-use Descom\Skeleton\Console\Install;
+use Descom\Supervisor\Console\Install;
 use Illuminate\Support\ServiceProvider;
 
-class SkeletonServiceProvider extends ServiceProvider
+class SupervisorServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'skeleton');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'supervisor');
     }
 
     public function boot()
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-              __DIR__.'/../config/config.php' => config_path('skeleton.php'),
+              __DIR__.'/../config/config.php' => config_path('supervisor.php'),
             ], 'config');
 
             $this->commands([

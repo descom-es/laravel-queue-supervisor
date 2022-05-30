@@ -1,11 +1,11 @@
 <?php
 
-namespace Descom\Skeleton\Http\Middleware;
+namespace Descom\Supervisor\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 
-class SkeletonMiddleware
+class SupervisorMiddleware
 {
     /**
      * Handle an incoming request.

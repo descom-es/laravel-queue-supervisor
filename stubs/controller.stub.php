@@ -1,11 +1,11 @@
 <?php
 
-namespace Descom\Skeleton\Http\Controllers;
+namespace Descom\Supervisor\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class SkeletonController extends Controller
+class SupervisorController extends Controller
 {
     /**
      * Display a listing of the resource.

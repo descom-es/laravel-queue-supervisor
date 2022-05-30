@@ -1,10 +1,10 @@
 <?php
 
-namespace Descom\Skeleton\Models;
+namespace Descom\Supervisor\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SkeletonModel extends Model
+class SupervisorModel extends Model
 {
-    protected $table = 'skeletons';
+    protected $table = 'supervisors';
 }

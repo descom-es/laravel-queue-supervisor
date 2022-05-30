@@ -1,6 +1,6 @@
 <?php
 
-namespace Descom\Skeleton\Database\Factories;
+namespace Descom\Supervisor\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Models\Name;

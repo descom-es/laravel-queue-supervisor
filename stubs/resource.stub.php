@@ -1,10 +1,10 @@
 <?php
 
-namespace Descom\Skeleton\Http\Resources\Catalog;
+namespace Descom\Supervisor\Http\Resources\Catalog;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SkeletonResource extends JsonResource
+class SupervisorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

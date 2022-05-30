@@ -1,6 +1,6 @@
 {
-    "name": "descom/skeleton",
-    "description": "Template to generate a Laravel Package",
+    "name": "descom/laravel-supervisor",
+    "description": "Laravel package for supervisor queue:work",
     "license": "MIT",
     "authors": [
         {
@@ -11,23 +11,23 @@
     ],
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^8.56"
+        "laravel/framework": "^9.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.4",
-        "orchestra/testbench": "^6.15",
+        "orchestra/testbench": "7.5",
         "phpstan/phpstan": "^1.2",
         "phpunit/phpunit": "^9.3"
     },
     "autoload": {
         "psr-4": {
-            "Descom\\Skeleton\\": "src",
-            "Descom\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Descom\\Supervisor\\": "src",
+            "Descom\\Supervisor\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Descom\\Skeleton\\Tests\\": "tests"
+            "Descom\\Supervisor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Descom\\Skeleton\\SkeletonServiceProvider"
+                "Descom\\Supervisor\\SupervisorServiceProvider"
             ]
         }
     },

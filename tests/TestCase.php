@@ -1,8 +1,8 @@
 <?php
 
-namespace Descom\Skeleton\Tests;
+namespace Descom\Supervisor\Tests;
 
-use Descom\Skeleton\SkeletonServiceProvider;
+use Descom\Supervisor\SupervisorServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -15,7 +15,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-        SkeletonServiceProvider::class,
+        SupervisorServiceProvider::class,
     ];
     }
 

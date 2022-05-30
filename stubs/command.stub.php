@@ -1,17 +1,17 @@
 <?php
 
-namespace Descom\Skeleton\Commands;
+namespace Descom\Supervisor\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class SupervisorCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'skeleton:test';
+    protected $signature = 'supervisor:test';
 
     /**
      * The console command description.
@@ -37,7 +37,7 @@ class SkeletonCommand extends Command
      */
     public function handle()
     {
-        $this->info('skeleton command');
+        $this->info('supervisor command');
 
         return 0;
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Descom\Skeleton\Policies;
+namespace Descom\Supervisor\Policies;
 
 use App\User;
-use Descom\Skeleton\Models\SkeletonModel;
+use Descom\Supervisor\Models\SupervisorModel;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class SkeletonPolicy
+class SupervisorPolicy
 {
     use HandlesAuthorization;
 
@@ -15,7 +15,7 @@ class SkeletonPolicy
         return true;
     }
 
-    public function view(User $user, SkeletonModel $skeleton)
+    public function view(User $user, SupervisorModel $supervisor)
     {
     }
 
@@ -23,11 +23,11 @@ class SkeletonPolicy
     {
     }
 
-    public function update(User $user, SkeletonModel $skeleton)
+    public function update(User $user, SupervisorModel $supervisor)
     {
     }
 
-    public function delete(User $user, SkeletonModel $skeleton)
+    public function delete(User $user, SupervisorModel $supervisor)
     {
     }
 }
