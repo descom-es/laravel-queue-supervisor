@@ -19,6 +19,9 @@ class Exec
 
     public static function asyncRun(string $command): ?int
     {
+        exec($command . " > /dev/null 2>&1 &" );
+
+        return null;
         $process = Process::fromShellCommandline($command . " > /dev/null 2>&1 &");
         $process->disableOutput();
 
