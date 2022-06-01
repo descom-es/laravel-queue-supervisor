@@ -7,14 +7,14 @@ use Descom\Supervisor\Tests\TestCase;
 
 class ServiceStatusTest extends TestCase
 {
-    public function test_empty_status_if_not_defined()
+    public function testEmptyStatusIfNotDefined()
     {
         $this->app['config']->set('supervisor.workers', []);
 
         $this->assertCount(0, Service::status());
     }
 
-    public function test_status_worker_disabled()
+    public function testStatusWorkerDisabled()
     {
         $this->app['config']->set('supervisor.workers', [
             'worker1' => [
@@ -28,7 +28,7 @@ class ServiceStatusTest extends TestCase
         $this->assertFalse($workers[0]->isEnabled());
     }
 
-    public function test_status_worker_enabled()
+    public function testStatusWorkerEnabled()
     {
         $this->app['config']->set('supervisor.workers', [
             'worker1' => [
@@ -41,7 +41,7 @@ class ServiceStatusTest extends TestCase
         $this->assertTrue($workers[0]->isEnabled());
     }
 
-    public function test_status_worker_stopped()
+    public function testStatusWorkerStopped()
     {
         $this->app['config']->set('supervisor.workers', [
             'worker1' => [],
@@ -53,7 +53,7 @@ class ServiceStatusTest extends TestCase
         $this->assertFalse($workers[0]->isRunning());
     }
 
-    public function test_status_worker_running()
+    public function testStatusWorkerRunning()
     {
         $this->app['config']->set('supervisor.workers', [
             'worker1' => [

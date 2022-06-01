@@ -34,7 +34,7 @@
         "psalm": "vendor/bin/psalm",
         "test": "./vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
-        "style": "vendor/bin/php-cs-fixer"
+        "style-fix": "vendor/bin/php-cs-fixer fix"
     },
     "config": {
         "sort-packages": true
