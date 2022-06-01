@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-compoer require descom/laravel-queue-supervisor
+compoer require descom/laravel-supervisor-queue
 ```
 
 ## Configure
