@@ -24,6 +24,13 @@ class Exec
 
         $process->start();
 
+        print_r([
+            'toTest' => [
+                'command' => $command,
+                'pid' => $process->getPid(),
+            ],
+        ]);
+
         return $process->getPid();
     }
 }
