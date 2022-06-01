@@ -5,8 +5,6 @@ namespace Descom\Supervisor\Console;
 use Descom\Supervisor\Service;
 use Descom\Supervisor\Workers\Status;
 use Illuminate\Console\Command;
-use Symfony\Component\Console\Helper\TableCellStyle;
-use Symfony\Component\Console\Helper\TableStyle;
 
 class SupervisorStatus extends Command
 {
