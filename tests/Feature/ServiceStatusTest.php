@@ -57,7 +57,7 @@ class ServiceStatusTest extends TestCase
     {
         $this->app['config']->set('supervisor.workers', [
             'worker1' => [
-                'max-time' => 1,
+                'max-time' => 10,
             ],
         ]);
 
