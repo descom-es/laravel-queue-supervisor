@@ -39,19 +39,6 @@ class SupervisorStatus extends Command
                 $workersStatus
             ),
             'compact',
-            [
-                new TableStyle([
-                    'cell_padding' => 1,
-                    'cell_style' => new TableCellStyle([
-
-                    ]),
-                ]),
-                new TableStyle([
-                    'style' => new TableCellStyle([
-                        'align' => 'center',
-                    ]),
-                ]),
-            ]
         );
 
         $this->output->writeln('');
