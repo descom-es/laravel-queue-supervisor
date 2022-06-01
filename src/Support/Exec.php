@@ -17,23 +17,8 @@ class Exec
         return $output;
     }
 
-    public static function asyncRun(string $command): ?int
+    public static function asyncRun(string $command): void
     {
-        exec('/usr/bin/nohup ' . $command . " > /dev/null 2>&1 &" );
-
-        return null;
-        $process = Process::fromShellCommandline($command . " > /dev/null 2>&1 &");
-        $process->disableOutput();
-
-        $process->start();
-
-        print_r([
-            'toTest' => [
-                'command' => $command,
-                'pid' => $process->getPid(),
-            ],
-        ]);
-
-        return $process->getPid();
+        exec('nohup '. $command . " > /dev/null 2>&1 &");
     }
 }

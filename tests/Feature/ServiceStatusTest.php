@@ -57,19 +57,13 @@ class ServiceStatusTest extends TestCase
     {
         $this->app['config']->set('supervisor.workers', [
             'worker1' => [
-                'max-time' => 10,
+                'options' => [
+                    'max-time' => 1,
+                ],
             ],
         ]);
 
         Service::start();
-
-        exec('ps -ef | grep queue', $output);
-
-        print_r([
-            'toTest' => [
-                'output' => $output,
-            ],
-        ]);
 
         $workers = Service::status();
 
