@@ -63,6 +63,14 @@ class ServiceStatusTest extends TestCase
 
         Service::start();
 
+        exec('ps -ef | grep queue', $output);
+
+        print_r([
+            'toTest' => [
+                'output' => $output,
+            ],
+        ]);
+
         $workers = Service::status();
 
         $this->assertCount(1, $workers);
