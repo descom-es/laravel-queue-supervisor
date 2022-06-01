@@ -1,5 +1,5 @@
 {
-    "name": "descom/laravel-supervisor",
+    "name": "descom/laravel-supervisor-queue",
     "description": "Laravel package for supervisor queue:work",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,8 @@
     ],
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^9.0"
+        "illuminate/contracts": "^9.0",
+        "symfony/process": "^6.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.4",
@@ -21,8 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Descom\\Supervisor\\": "src",
-            "Descom\\Supervisor\\Database\\Factories\\": "database/factories"
+            "Descom\\Supervisor\\": "src"
         }
     },
     "autoload-dev": {

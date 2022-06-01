@@ -22,13 +22,8 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
-        extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, exif
+        extensions: mbstring
         coverage: xdebug
-
-    - name: Install SQLite 3
-      run: |
-          sudo apt-get update
-          sudo apt-get install sqlite3
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -38,9 +33,9 @@ jobs:
       uses: actions/cache@v2
       with:
         path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        key: ${{ runner.os }}-${{ matrix.php-versions }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
-          ${{ runner.os }}-php-
+          ${{ runner.os }}-${{ matrix.php-versions }}-php-
 
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
@@ -49,4 +44,4 @@ jobs:
         composer dump
 
     - name: Run test phpunit
-      run: vendor/bin/phpunit
+      run: composer test
