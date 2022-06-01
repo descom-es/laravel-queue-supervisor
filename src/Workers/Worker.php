@@ -70,7 +70,7 @@ class Worker
             Helper::artisan(),
             'queue:work',
             '--name',
-            '"'.$this->workerName.'"'
+            '"'.$this->workerName.'"',
         ];
 
         foreach ($this->options as $key => $value) {
@@ -84,7 +84,6 @@ class Worker
 
         return implode(' ', $arguments).' '.$this->connection;
     }
-
 
     private function loadConfig(): void
     {
@@ -117,7 +116,7 @@ class Worker
 
 
         if (count($works) === 0) {
-           return null;
+            return null;
         }
 
         $work = trim($works[0]);

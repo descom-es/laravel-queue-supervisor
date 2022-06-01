@@ -4,7 +4,6 @@ namespace Descom\Supervisor\Console;
 
 use Descom\Supervisor\Service;
 use Descom\Supervisor\Services\Exceptions\ExceptionWorkerIsNotRunning;
-use Descom\Supervisor\Services\Exceptions\ExceptionWorkerIsRunning;
 use Illuminate\Console\Command;
 
 class SupervisorStop extends Command
@@ -25,9 +24,10 @@ class SupervisorStop extends Command
 
         try {
             Service::stop();
-        } catch (ExceptionWorkerIsNotRunning $exception) {}
+        } catch (ExceptionWorkerIsNotRunning $exception) {
+        }
 
 
-       $this->call('supervisor:status');
+        $this->call('supervisor:status');
     }
 }

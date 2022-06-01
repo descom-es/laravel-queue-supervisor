@@ -25,8 +25,9 @@ class SupervisorRestart extends Command
 
         try {
             Service::restart();
-        } catch (ExceptionWorkerIsRunning|ExceptionWorkerIsNotRunning $exception) {}
+        } catch (ExceptionWorkerIsRunning|ExceptionWorkerIsNotRunning $exception) {
+        }
 
-       $this->call('supervisor:status');
+        $this->call('supervisor:status');
     }
 }

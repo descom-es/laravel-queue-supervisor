@@ -2,8 +2,6 @@
 
 namespace Descom\Supervisor\Support;
 
-use Descom\Supervisor\Worker;
-
 class Helper
 {
     public static function artisan(): string

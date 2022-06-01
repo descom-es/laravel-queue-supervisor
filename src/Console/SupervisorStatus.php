@@ -52,7 +52,6 @@ class SupervisorStatus extends Command
                     ]),
                 ]),
             ]
-
         );
 
         $this->output->writeln('');

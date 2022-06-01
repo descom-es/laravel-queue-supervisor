@@ -33,7 +33,8 @@
     "scripts": {
         "psalm": "vendor/bin/psalm",
         "test": "./vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "style": "vendor/bin/php-cs-fixer"
     },
     "config": {
         "sort-packages": true

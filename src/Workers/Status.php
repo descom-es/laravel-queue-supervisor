@@ -8,8 +8,7 @@ class Status
         private string $workerName,
         private bool $enabled,
         private ?int $pid,
-    )
-    {
+    ) {
     }
 
     public function getName(): string

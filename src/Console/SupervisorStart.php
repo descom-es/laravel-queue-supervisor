@@ -24,9 +24,10 @@ class SupervisorStart extends Command
 
         try {
             Service::start();
-        } catch (ExceptionWorkerIsRunning $exception) {}
+        } catch (ExceptionWorkerIsRunning $exception) {
+        }
 
 
-       $this->call('supervisor:status');
+        $this->call('supervisor:status');
     }
 }
