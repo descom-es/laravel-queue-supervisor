@@ -4,6 +4,11 @@
 [![analyse](https://github.com/descom-es/laravel-queue-supervisor/actions/workflows/analyse.yml/badge.svg)](https://github.com/descom-es/laravel-queue-supervisor/actions/workflows/analyse.yml)
 [![style](https://github.com/descom-es/laravel-queue-supervisor/actions/workflows/style.yml/badge.svg)](https://github.com/descom-es/laravel-queue-supervisor/actions/workflows/style.yml)
 
+---
+The motivation for creating this package is to allow working with queues in a shared hosting environment.
+
+---
+
 ## Install
 
 ```sh
