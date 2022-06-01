@@ -19,6 +19,6 @@ class Exec
 
     public static function asyncRun(string $command): void
     {
-        exec('nohup '. $command . " > /dev/null 2>&1 &");
+        exec('/usr/bin/nohup ' . $command . " > /dev/null 2>&1 &" );
     }
 }
