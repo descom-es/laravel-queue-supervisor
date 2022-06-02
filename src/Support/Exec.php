@@ -17,8 +17,12 @@ class Exec
         return $output;
     }
 
-    public static function asyncRun(string $command): void
+    public static function asyncRun(string $command): ?int
     {
-        exec('/usr/bin/nohup ' . $command . " > /dev/null 2>&1 &" );
+        exec('/usr/bin/nohup ' . $command . " > /dev/null 2>&1 & echo $!" , $output);
+
+        $pid = (int)$output[0];
+
+        return $pid > 0 ? $pid : null;
     }
 }
