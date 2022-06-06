@@ -52,24 +52,4 @@ class ServiceStatusTest extends TestCase
         $this->assertCount(1, $workers);
         $this->assertFalse($workers[0]->isRunning());
     }
-
-    public function testStatusWorkerRunning()
-    {
-        $this->app['config']->set('supervisor.workers', [
-            'worker1' => [
-                'options' => [
-                    'max-time' => 3,
-                ],
-            ],
-        ]);
-
-        Service::start();
-
-        $workers = Service::status();
-
-        $this->assertCount(1, $workers);
-        $this->assertTrue($workers[0]->isRunning());
-
-        Service::stop();
-    }
 }

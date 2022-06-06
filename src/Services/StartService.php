@@ -10,7 +10,7 @@ class StartService extends AbstractService
     {
         array_map(
             function (Worker $worker) {
-                print_r(['pid' => $worker->start()]);
+                $worker->start();
             },
             $this->workers()
         );
