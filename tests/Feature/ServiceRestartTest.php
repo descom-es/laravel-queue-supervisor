@@ -19,7 +19,7 @@ class ServiceRestartTest extends TestCase
 
         Service::start();
         $workers = Service::status();
-        $pid =$this->getPid();
+        $pid = $this->getPid();
 
         Service::restart();
 
@@ -32,8 +32,8 @@ class ServiceRestartTest extends TestCase
 
     private function getPid(): ?int
     {
-
         $workers = Service::status();
+
         return  $workers[0]->getPid();
     }
 }

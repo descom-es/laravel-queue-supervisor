@@ -18,7 +18,8 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         try {
             Service::stop();
-        } catch (Exception $exception) {}
+        } catch (Exception $exception) {
+        }
 
         parent::tearDown();
     }
